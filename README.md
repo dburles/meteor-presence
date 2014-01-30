@@ -2,6 +2,17 @@
 
 A very simple presence package, to track who's online, etc.
 
+## Important
+
+This version of presence has been re-written from the ground up to make use of the new Meteor connection API.
+If you're using a version of Meteor prior to 0.7.0, you should use the 0.3.0 version. Add to your `smart.json`:
+
+```json
+"packages": {
+  "presence": "0.3.0"
+}
+```
+
 ## Installation
 
 The Presence package can be installed with [Meteorite](https://github.com/oortcloud/meteorite/). From inside a Meteorite-managed app:
