@@ -61,7 +61,7 @@ Presence.state = function() {
 Now we can simply query the collection to find all other users that share the same currentRoomId
 
 ```js
-Presences.find({ state: {currentRoomId: Session.get('currentRoomId')} })
+Presences.find({ state: { online: true, currentRoomId: Session.get('currentRoomId') } })
 ```
 
 Of course presence will call your function reactively, so everyone will know as soon as things change.
