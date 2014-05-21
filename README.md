@@ -53,7 +53,7 @@ If you want to track more than just users' online state, you can set a custom st
 Presence.state = function() {
   return {
     online: true,
-    currentRoomId: Session.get('currentRoomId');
+    currentRoomId: Session.get('currentRoomId')
   };
 }
 ```
@@ -61,7 +61,7 @@ Presence.state = function() {
 Now we can simply query the collection to find all other users that share the same currentRoomId
 
 ```js
-Presences.find({ currentRoomId: Session.get('currentRoomId') });
+Presences.find({ state: {currentRoomId: Session.get('currentRoomId')} })
 ```
 
 Of course presence will call your function reactively, so everyone will know as soon as things change.
