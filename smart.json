@@ -3,6 +3,6 @@
   "description": "A package to help track users' presence",
   "homepage": "https://github.com/dburles/meteor-presence",
   "author": "David Burles, Tom Coleman",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "git": "https://github.com/dburles/meteor-presence.git"
 }
