@@ -29,13 +29,13 @@ NOTE: The package doesn't publish the presences by default, you'll need to do so
 ```js
 Meteor.publish('userPresence', function() {
   // Setup some filter to find the users your user
-  // cares about. It's unlikely that you want to publish the 
+  // cares about. It's unlikely that you want to publish the
   // presences of _all_ the users in the system.
-  
+
   // If for example we wanted to publish only logged in users we could apply:
   // filter = { userId: { $exists: true }};
-  var filter = {}; 
-  
+  var filter = {};
+
   return Presences.find(filter, {fields: {state: true, userId: true}});
 });
 ```
@@ -43,6 +43,21 @@ Meteor.publish('userPresence', function() {
 To use that presence, you can inspect the `Presences` collection in the client.
 
 ## Advanced Usage
+
+### Notification of connection and disconnection
+
+There are two attachment points for being made aware of a connection to the server and a disconnection from the server.
+The handler you assign to Presence.onConnect is called when a new connection is added. Similarly Presence.onDisconnect is called when the user disconnects.
+The are wired up as below:
+
+```js
+// configure presence to call connectionAdded and connectionRemoved
+Meteor.startup(function() {
+	Presence.onConnect = tracking.connectionAdded;
+	Presence.onDisconnect = tracking.connectionRemoved;
+});
+```
+The object pasted to the functions contains two properties, connectionId and userId property, if it's associated with logged in user.
 
 ### State functions
 
