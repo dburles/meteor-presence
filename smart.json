@@ -4,5 +4,8 @@
   "homepage": "https://github.com/dburles/meteor-presence",
   "author": "David Burles, Tom Coleman",
   "version": "0.4.6",
-  "git": "https://github.com/dburles/meteor-presence.git"
+  "git": "https://github.com/dburles/meteor-presence.git",
+  "packages":{
+    "collection-hooks": {}
+  }
 }
