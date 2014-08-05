@@ -1,3 +1,8 @@
+## v0.4.7
+
+* onConnection no longer appears to fire on login/logout
+  replaced upsert with insert and turn fixed issue #9
+
 ## v0.4.5
 
 * Simulate updatePresence method on the client so that we get latency compensation
