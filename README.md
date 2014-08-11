@@ -42,6 +42,12 @@ Meteor.publish('userPresence', function() {
 });
 ```
 
+And of course, don't forget to subscribe.
+
+```js
+Meteor.subscribe('userPresence');
+```
+
 ## State function
 
 If you want to track more than just users' online state, you can set a custom state function. (The default state function returns just `'online'`):
