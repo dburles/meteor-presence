@@ -1,7 +1,7 @@
 Package.describe({
   name: "tmeasday:presence",
   summary: "A package to help track users' presence",
-  version: "1.0.0",
+  version: "1.0.1",
   git: "https://github.com/dburles/meteor-presence.git"
 });
 
