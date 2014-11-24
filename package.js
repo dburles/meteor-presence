@@ -7,6 +7,7 @@ Package.describe({
 
 Package.onUse(function (api) {
   api.versionsFrom('1.0');
+  api.use('tracker@1.0.3', 'client');
   api.addFiles('lib/common.js', ['client', 'server']);
   api.addFiles('lib/client.js', 'client');
   api.addFiles('lib/server.js', 'server');
