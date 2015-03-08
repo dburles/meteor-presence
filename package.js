@@ -9,6 +9,7 @@ Package.onUse(function (api) {
   api.versionsFrom('1.0');
   api.use('tracker', 'client');
   api.use('mongo');
+  api.use('underscore');
 
   api.addFiles('lib/common.js');
   api.addFiles('lib/client.js', 'client');
